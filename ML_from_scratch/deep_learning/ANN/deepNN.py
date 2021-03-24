@@ -10,7 +10,7 @@ class DNN():
         self.lRate = lRate
         self.n_iters = n_iters
         self.loss = CrossEntropy()
-        self.optimizer = optimizers[optimizer](self.lRate)
+        self.optimizer = optimizers[optimizer](self.lRate, momentum)
 
         self.layers = []
         self.n_layers = len(layer_dims) - 1
